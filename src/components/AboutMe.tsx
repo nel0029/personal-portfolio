@@ -20,7 +20,7 @@ import vsIcon from "../assets/icons/vs-code-logo-microsoft.svg";
 
 const AboutMe = () => {
   return (
-    <div className="w-full h-full">
+    <div id="about-me" className="w-full h-full">
       <div className="w-full flex flex-col gap-y-4 flex-wrap">
         <h1 className="text-xl font-bold">About Me</h1>
         <div className="w-full flex flex-col md:flex-row gap-x-2 gap-y-2">

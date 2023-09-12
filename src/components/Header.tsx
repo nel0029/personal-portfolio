@@ -1,37 +1,48 @@
 /** @format */
-import { useState, useEffect, useRef } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import {
+  IoMenuOutline,
+  IoClose,
+  IoLogoGithub,
+  IoLogoLinkedin,
+} from "react-icons/io5";
 
 const Header = () => {
-  const [isNavButtonsVisible, setIsNavButtonsVisible] = useState(false);
-
   const headerRef = useRef<HTMLDivElement | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleScroll = () => {
-    const heroSectionHeight = window.innerHeight;
-    const scrollPosition = window.scrollY;
-
-    if (
-      headerRef &&
-      headerRef.current &&
-      scrollPosition >= heroSectionHeight - headerRef.current.offsetHeight
-    ) {
-      setIsNavButtonsVisible(true);
-    } else {
-      setIsNavButtonsVisible(false);
+  const goToMyWorks = () => {
+    const height = window.innerHeight;
+    setIsMenuOpen(false);
+    if (headerRef && headerRef.current) {
+      window.scrollTo({
+        top: height - headerRef.current.offsetHeight,
+        behavior: "smooth",
+      });
     }
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+  const goToAboutMe = () => {
+    const aboutMe = document.getElementById("about-me");
+    setIsMenuOpen(false);
+    if (aboutMe) {
+      aboutMe.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const goToContactMe = () => {
+    const scrollHeight = document.body.scrollHeight;
+    setIsMenuOpen(false);
+    window.scrollTo(0, scrollHeight);
+  };
+
+  const openMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div
@@ -47,12 +58,91 @@ const Header = () => {
           <span className="text-blue">NEL</span>
           <span>DEV</span>
         </div>
-        <motion.div
-          animate={{ opacity: isNavButtonsVisible ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          Nav Buttons
-        </motion.div>
+        <div className="hidden md:flex flex-row gap-x-10">
+          <span
+            onClick={goToMyWorks}
+            className="hover:underline hover:text-blue cursor-pointer"
+          >
+            Projects
+          </span>
+          <span
+            onClick={goToAboutMe}
+            className="hover:underline hover:text-blue cursor-pointer"
+          >
+            About Me
+          </span>
+          <span
+            onClick={goToContactMe}
+            className="hover:underline hover:text-blue cursor-pointer"
+          >
+            Contact
+          </span>
+        </div>
+        <div className="flex md:hidden">
+          <span onClick={openMenu} className="text-3xl">
+            <IoMenuOutline />
+          </span>
+
+          <motion.div
+            className="w-full h-screen fixed top-0 right-0 flex flex-row justify-center items-center bg-black bg-opacity-20"
+            animate={{ translateX: isMenuOpen ? "0%" : "100%" }}
+            transition={{ duration: 0.1 }}
+          >
+            <div
+              onClick={() => setIsMenuOpen(false)}
+              className="h-full w-[60px] "
+            ></div>
+            <div className="w-full h-full flex flex-col justify-center items-center bg-white">
+              <div className="w-full flex flex-row justify-end text-3xl">
+                <span onClick={() => setIsMenuOpen(false)} className="p-2 ">
+                  <IoClose />
+                </span>
+              </div>
+              <div className="flex-grow w-full flex flex-col justify-center items-center gap-y-10 text-xl">
+                <span
+                  onClick={goToMyWorks}
+                  className="hover:underline hover:text-blue cursor-pointer"
+                >
+                  Projects
+                </span>
+                <span
+                  onClick={goToAboutMe}
+                  className="hover:underline hover:text-blue cursor-pointer"
+                >
+                  About Me
+                </span>
+                <span
+                  onClick={goToContactMe}
+                  className="hover:underline hover:text-blue cursor-pointer"
+                >
+                  Contact
+                </span>
+                <div className="w-full flex flex-row items-center justify-center gap-x-4 py-4">
+                  <a
+                    className="text-xl flex flex-row items-center gap-x-2 hover:text-blue"
+                    href="https://github.com/nel0029"
+                    target="_blank"
+                  >
+                    <span>
+                      <IoLogoGithub />
+                    </span>
+                    <span className="text-base">Github</span>
+                  </a>
+                  <a
+                    className="text-xl flex flex-row items-center gap-x-2 hover:text-blue"
+                    href="https://linkedin.com/in/jaynel-lucañas-130577253"
+                    target="_blank"
+                  >
+                    <span>
+                      <IoLogoLinkedin />
+                    </span>
+                    <span className="text-base">LinkedIn</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ import Projects from "./components/Projects";
 
 function App() {
   return (
-    <div className="w-full max-w-[1024px] h-auto flex flex-col justify-center scroll-smooth font-poppins px-2 gap-y-4">
+    <div className="w-full max-w-[1024px] h-auto flex flex-col justify-center scroll-smooth font-poppins px-2 gap-y-4 ">
       <Header />
       <Hero />
       <Projects />

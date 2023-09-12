@@ -87,7 +87,7 @@ const Projects = () => {
                 </a>
                 <a
                   className="flex flex-row items-center gap-x-2 hover:text-blue hover:underline font-bold"
-                  href="https://cake-store-theta.vercel.app/"
+                  href="https://globally.vercel.app/"
                   target="_blank"
                 >
                   <span className="text-xl">
@@ -99,7 +99,7 @@ const Projects = () => {
             </div>
           </div>
           <div className=" flex justify-center items-center">
-            <div className="w-full h-full lg:max-w-[35rem]">
+            <div className="max-w-full h-full md:w-[400px]">
               <Swiper
                 autoplay={{
                   delay: 2500,
@@ -186,7 +186,7 @@ const Projects = () => {
             </div>
           </div>
           <div className=" flex justify-center items-center">
-            <div className="w-full h-full lg:max-w-[35rem]">
+            <div className="max-w-full h-full md:w-[400px]">
               <Swiper
                 autoplay={{
                   delay: 2500,
