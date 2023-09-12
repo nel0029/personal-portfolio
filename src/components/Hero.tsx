@@ -26,8 +26,8 @@ const Hero = () => {
     window.scrollTo(0, scrollHeight);
   };
   return (
-    <div className="w-full min-h-screen flex-1 flex flex-col gap-y-6 md:gap-y-16 0 py-10 px-2">
-      <div className="w-full flex flex-col gap-y-4 md:gap-y-10">
+    <div className="w-full min-h-screen flex-1 flex flex-col gap-y-16 py-10 px-2">
+      <div className="w-full flex flex-col gap-y-10">
         <div className="w-full flex flex-col-reverse items-center md:items-center md:flex-row pt-5 md:pt-10 gap-y-2">
           <motion.div
             className="w-full text-xl md:text-3xl font-poppins"
