@@ -26,23 +26,35 @@ const Hero = () => {
     window.scrollTo(0, scrollHeight);
   };
   return (
-    <div className="w-full min-h-screen flex-1 flex flex-col justify-end gap-y-20 lg:gap-y-30 py-10 px-2">
-      <div className="w-full flex flex-col gap-y-10 ">
-        <motion.div
-          className="w-full text-xl md:text-3xl font-poppins"
-          initial={{ translateY: "-100%", opacity: 0 }}
-          animate={{ translateY: "0%", opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <p className="text-3xl md:text-6xl md:sleading-[80px] font-bold">
-            Hello, I'm Jaynel.
-          </p>
-          <p>
-            aspiring{" "}
-            <span className="font-bold text-blue">Fullstack Web Developer</span>{" "}
-            who loves buiding web interface and web applications.
-          </p>
-        </motion.div>
+    <div className="w-full min-h-screen flex-1 flex flex-col gap-y-6 md:gap-y-16 0 py-10 px-2">
+      <div className="w-full flex flex-col gap-y-4 md:gap-y-10">
+        <div className="w-full flex flex-col-reverse items-center md:items-center md:flex-row pt-5 md:pt-10 gap-y-2">
+          <motion.div
+            className="w-full text-xl md:text-3xl font-poppins"
+            initial={{ translateY: "-100%", opacity: 0 }}
+            animate={{ translateY: "0%", opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <p className="text-3xl md:text-6xl md:sleading-[80px] font-bold">
+              Hello, I'm Jaynel.
+            </p>
+            <p>
+              aspiring{" "}
+              <span className="font-bold text-blue">
+                Fullstack Web Developer
+              </span>{" "}
+              who loves buiding web interface and web applications.
+            </p>
+          </motion.div>
+
+          <div>
+            <img
+              className="w-[150px] md:w-[400px] rounded-full"
+              src="./GRAD.jpg"
+            />
+          </div>
+        </div>
+
         <div className="w-full flex flex-row items-center gap-x-2 text-base md:text-xl">
           <motion.button
             className="border border-blue bg-blue rounded px-2 py-1 text-white font-bold hover:bg-opacity-80"
