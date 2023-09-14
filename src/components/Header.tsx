@@ -1,5 +1,5 @@
 /** @format */
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   IoMenuOutline,
@@ -44,6 +44,14 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "visible";
+    }
+  }, [isMenuOpen]);
+
   return (
     <div
       ref={headerRef}
@@ -51,13 +59,13 @@ const Header = () => {
       className="z-10 w-full fixed top-0 right-0 bg-white flex flex-row justify-center items-center"
     >
       <div className="w-full max-w-[1024px] flex flex-row items-center justify-between p-1 md:p-2">
-        <div
-          className="flex flex-row items-center gap-x-1 font-bold text-3xl font-poppins cursor-pointer"
+        <button
+          className="flex flex-row items-center gap-x-1 font-bold text-3xl font-poppins"
           onClick={scrollToTop}
         >
           <span className="text-blue">NEL</span>
           <span>DEV</span>
-        </div>
+        </button>
         <div className="hidden md:flex flex-row gap-x-10">
           <span
             onClick={goToMyWorks}
@@ -84,8 +92,8 @@ const Header = () => {
           </span>
 
           <motion.div
-            className="w-full h-screen fixed top-0 right-0 flex flex-row justify-center items-center bg-black bg-opacity-20"
-            animate={{ translateX: isMenuOpen ? "0%" : "100%" }}
+            className="w-full h-screen fixed top-0 -right-full flex flex-row justify-center items-center bg-black bg-opacity-20"
+            animate={{ translateX: isMenuOpen ? "-100%" : "100%" }}
             transition={{ duration: 0.1 }}
           >
             <div

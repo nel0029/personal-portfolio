@@ -48,8 +48,11 @@ const Hero = () => {
           </motion.div>
 
           <div>
-            <img
-              className="w-[150px] md:w-[400px] rounded-full"
+            <motion.img
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="w-[200px] md:w-[400px] rounded-full"
               src="./GRAD.jpg"
             />
           </div>
@@ -60,7 +63,7 @@ const Hero = () => {
             className="border border-blue bg-blue rounded px-2 py-1 text-white font-bold hover:bg-opacity-80"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.1, duration: 0.5 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
             onClick={goToMyWorks}
           >
             Check my Works
@@ -69,7 +72,7 @@ const Hero = () => {
             className="border border-blue  rounded px-2 py-1 text-blue font-bold hover:bg-blue hover:bg-opacity-10 hover:border-opacity-80"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
             onClick={goToContactMe}
           >
             Contact Me

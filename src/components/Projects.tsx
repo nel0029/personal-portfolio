@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 import { globallyImages } from "./data/GloballyImages";
 import { cakeStoreImages } from "./data/CakeStoreImages";
 import {
@@ -101,15 +101,11 @@ const Projects = () => {
           <div className=" flex justify-center items-center">
             <div className="max-w-full h-full md:w-[400px]">
               <Swiper
-                autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false,
-                }}
                 pagination={{
                   clickable: true,
                 }}
                 navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
+                modules={[Pagination, Navigation]}
                 effect="slide"
                 speed={800}
                 slidesPerView={1}
@@ -188,15 +184,11 @@ const Projects = () => {
           <div className=" flex justify-center items-center">
             <div className="max-w-full h-full md:w-[400px]">
               <Swiper
-                autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false,
-                }}
                 pagination={{
                   clickable: true,
                 }}
                 navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
+                modules={[Pagination, Navigation]}
                 effect="slide"
                 speed={800}
                 slidesPerView={1}
