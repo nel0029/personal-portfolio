@@ -3,7 +3,12 @@
 import { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import {
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoLogoFacebook,
+  IoMail,
+} from "react-icons/io5";
 
 const Contact = () => {
   const messageCollectionRef = collection(db, "email");
@@ -40,7 +45,7 @@ const Contact = () => {
   };
   return (
     <div className="w-full flex flex-col gap-y-4">
-      <h1 className="text-xl font-bold">Message Me</h1>
+      <h1 className="text-3xl font-bold">Message Me</h1>
       <form className="w-full flex flex-col gap-y-2">
         <div className="w-full flex flex-row gap-x-4">
           <input
@@ -98,7 +103,14 @@ const Contact = () => {
           )}
         </div>
       </form>
-      <div className="w-full flex flex-row items-center justify-center gap-x-4 py-4">
+      <span className="font-bold">Socials:</span>
+      <div className="w-full grid grid-cols-2 text-gray-500">
+        <div className="text-xl flex flex-row items-center gap-x-2 hover:text-blue cursor-pointer">
+          <span>
+            <IoMail />
+          </span>
+          <span className="text-base">jaynellucanas29@gmail.com</span>
+        </div>
         <a
           className="text-xl flex flex-row items-center gap-x-2 hover:text-blue"
           href="https://github.com/nel0029"
@@ -109,6 +121,17 @@ const Contact = () => {
           </span>
           <span className="text-base">Github</span>
         </a>
+        <a
+          className="text-xl flex flex-row items-center gap-x-2 hover:text-blue"
+          href="https://facebook.com/jaynel29"
+          target="_blank"
+        >
+          <span>
+            <IoLogoFacebook />
+          </span>
+          <span className="text-base">facebook.com/jaynel29</span>
+        </a>
+
         <a
           className="text-xl flex flex-row items-center gap-x-2 hover:text-blue"
           href="https://linkedin.com/in/jaynel-lucañas-130577253"

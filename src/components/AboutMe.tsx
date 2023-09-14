@@ -19,10 +19,18 @@ import photoshopIcon from "../assets/icons/photoshop.png";
 import vsIcon from "../assets/icons/vs-code-logo-microsoft.svg";
 
 const AboutMe = () => {
+  const header = document.getElementById("header");
   return (
-    <div id="about-me" className="w-full h-full">
+    <div
+      style={{
+        paddingTop: header ? header.offsetHeight + 8 : "60px",
+        paddingBottom: header ? header.offsetHeight + 8 : "52px",
+      }}
+      id="about-me"
+      className="w-full h-full"
+    >
       <div className="w-full flex flex-col gap-y-4 flex-wrap">
-        <h1 className="text-xl font-bold">About Me</h1>
+        <h1 className="text-3xl font-bold">About Me</h1>
         <div className="w-full flex flex-col md:flex-row gap-x-2 gap-y-2">
           <div className="w-full flex flex-col flex-1 gap-y-4">
             <p>

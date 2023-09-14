@@ -12,9 +12,6 @@ import globallyUserProfile from "../../assets/globally/globally-user-profile.png
 
 export const globallyImages = [
   {
-    src: globallyLogIn,
-  },
-  {
     src: globallyHome,
   },
   {
@@ -34,6 +31,9 @@ export const globallyImages = [
   },
   {
     src: globallyUserProfile,
+  },
+  {
+    src: globallyLogIn,
   },
   {
     src: globallyDarkMode,
