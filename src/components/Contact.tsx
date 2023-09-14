@@ -119,7 +119,7 @@ const Contact = () => {
           <span>
             <IoLogoGithub />
           </span>
-          <span className="text-base">Github</span>
+          <span className="text-base">github.com/nel0029</span>
         </a>
         <a
           className="text-xl flex flex-row items-center gap-x-2 hover:text-blue"
@@ -140,12 +140,12 @@ const Contact = () => {
           <span>
             <IoLogoLinkedin />
           </span>
-          <span className="text-base">LinkedIn</span>
+          <span className="text-base">jaynel-lucañas-130577253</span>
         </a>
       </div>
       <div className="w-full flex flex-row justify-center items-center py-2">
         <span className="text-sm text-gray-500">
-          Personal portfolio of Jaynel Lucañas || 2023
+          Personal portfolio of Jaynel Lucañas | 2023
         </span>
       </div>
     </div>
