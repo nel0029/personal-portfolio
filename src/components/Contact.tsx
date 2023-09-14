@@ -104,7 +104,7 @@ const Contact = () => {
         </div>
       </form>
       <span className="font-bold">Socials:</span>
-      <div className="w-full grid grid-cols-2 text-gray-500">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 text-gray-500">
         <div className="text-xl flex flex-row items-center gap-x-2 hover:text-blue cursor-pointer">
           <span>
             <IoMail />
