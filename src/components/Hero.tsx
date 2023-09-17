@@ -47,7 +47,7 @@ const Hero = () => {
             <p>
               aspiring{" "}
               <span className="font-bold text-blue">
-                Fullstack Web Developer
+                Frontend / Fullstack Web Developer
               </span>{" "}
               who loves buiding web interface and web applications.
             </p>
