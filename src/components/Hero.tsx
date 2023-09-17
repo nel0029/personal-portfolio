@@ -11,19 +11,14 @@ const Hero = () => {
   };
 
   const goToMyWorks = () => {
-    const height = window.innerHeight;
-    const header = document.getElementById("header");
-    const headerHeight = header?.offsetHeight;
-
-    if (header && headerHeight) {
-      window.scrollTo({ top: height - headerHeight, behavior: "auto" });
-    }
+    const projects: HTMLElement | null = document.getElementById("projects");
+    projects?.scrollIntoView({ behavior: "smooth" });
   };
 
   const goToContactMe = () => {
-    const scrollHeight = document.body.scrollHeight;
+    const contact: HTMLElement | null = document.getElementById("contact");
 
-    window.scrollTo(0, scrollHeight);
+    contact?.scrollIntoView({ behavior: "smooth" });
   };
 
   const header = document.getElementById("header");
@@ -31,7 +26,7 @@ const Hero = () => {
   return (
     <div
       style={{ paddingTop: header ? header.offsetHeight : "52px" }}
-      className="w-full min-h-screen flex-1 flex flex-col gap-y-16 pb-10 px-2"
+      className="w-full min-h-screen flex-1 flex flex-col gap-y-10 px-2"
     >
       <div className="w-full flex flex-col gap-y-10">
         <div className="w-full flex flex-col-reverse items-center md:items-center md:flex-row pt-5 md:pt-10 gap-y-2">
@@ -107,7 +102,7 @@ const Hero = () => {
           <span className="text-base">LinkedIn</span>
         </a>
       </div>
-      <div className="w-full flex flex-row items-center justify-center relative">
+      <div className="w-full flex flex-row items-center justify-center relative pb-10">
         <motion.div
           className="border-2 px-1 py-2 rounded-full border-blue text-blue font-bold absolute"
           initial={{ opacity: 0 }}

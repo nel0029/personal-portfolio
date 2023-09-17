@@ -44,8 +44,8 @@ const Contact = () => {
     setFormError("");
   };
   return (
-    <div className="w-full flex flex-col gap-y-4">
-      <h1 className="text-3xl font-bold">Message Me</h1>
+    <div id="contact" className="w-full flex flex-col gap-y-4">
+      <h1 className="text-3xl font-bold">Contact Me</h1>
       <form className="w-full flex flex-col gap-y-2">
         <div className="w-full flex flex-row gap-x-4">
           <input
@@ -103,7 +103,7 @@ const Contact = () => {
           )}
         </div>
       </form>
-      <span className="font-bold">Socials:</span>
+      <span className="font-bold">Contacts:</span>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 text-gray-500">
         <div className="text-xl flex flex-row items-center gap-x-2 hover:text-blue cursor-pointer">
           <span>

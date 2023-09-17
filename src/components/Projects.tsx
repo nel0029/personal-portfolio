@@ -19,17 +19,25 @@ import typescriptIcon from "../assets/icons/typescript.svg";
 import tailwindcssIcon from "../assets/icons/tailwind-css.svg";
 
 const Projects = () => {
+  const header = document.getElementById("header");
   return (
-    <div className="w-full h-full min-h-screen flex flex-col gap-y-4 py-2">
+    <div
+      id="projects"
+      className="w-full h-full min-h-screen flex flex-col gap-y-4"
+      style={{
+        paddingTop: header ? header.offsetHeight + 8 : "60px",
+        paddingBottom: header ? header.offsetHeight + 8 : "52px",
+      }}
+    >
       <div className="w-full">
         <span className="text-3xl font-bold ">MY PROJECTS</span>
       </div>
       <div className="w-full flex flex-col gap-y-8">
-        <div className="w-full flex flex-col md:flex-row gap-x-4 ga-y-2 md:justify-between py-4">
+        <div className="w-full flex flex-col md:flex-row gap-x-4 ga-y-2 md:justify-between">
           <div className="flex-1 py-2">
             <div className="w-full h-full flex flex-col justify-between gap-y-4">
               <div className="w-full h-full flex flex-col gap-y-2">
-                <h1 className="text-3xl font-bold">Globally</h1>
+                <h1 className="text-2xl font-bold">Globally</h1>
                 <p>
                   Globally is a social media website and application for
                   everyone who has something to share with the world. This app
@@ -125,11 +133,11 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col md:flex-row gap-x-4 ga-y-2 md:justify-between py-4">
+        <div className="w-full flex flex-col md:flex-row gap-x-4 ga-y-2 md:justify-between">
           <div className="flex-1 py-2">
             <div className="w-full h-full flex flex-col justify-between gap-y-4">
               <div className="w-full h-full flex flex-col gap-y-2">
-                <h1 className="text-3xl font-bold">My Portfolio</h1>
+                <h1 className="text-2xl font-bold">My Portfolio</h1>
                 <p>
                   My portfolio is a portfolio of mine that showcasing my skills,
                   recent projects and tech stack I know.
@@ -205,11 +213,11 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col md:flex-row gap-x-4 ga-y-2 md:justify-between py-4">
+        <div className="w-full flex flex-col md:flex-row gap-x-4 ga-y-2 md:justify-between">
           <div className="flex-1 py-2">
             <div className="w-full h-full flex flex-col justify-between gap-y-4">
               <div className="w-full h-full flex flex-col gap-y-2">
-                <h1 className="text-3xl font-bold">Cake Store</h1>
+                <h1 className="text-2xl font-bold">Cake Store</h1>
                 <p>
                   Cake Store is a landing page for a cake store. It displays
                   information about the store, the services they offer, customer

@@ -11,33 +11,27 @@ import {
 const Header = () => {
   const headerRef = useRef<HTMLDivElement | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [projects, setProjects] = useState<HTMLElement | null>(null);
+  const [about, setAbout] = useState<HTMLElement | null>(null);
+  const [contact, setContact] = useState<HTMLElement | null>(null);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const goToMyWorks = () => {
-    const height = window.innerHeight;
     setIsMenuOpen(false);
-    if (headerRef && headerRef.current) {
-      window.scrollTo({
-        top: height - headerRef.current.offsetHeight,
-        behavior: "smooth",
-      });
-    }
+    projects?.scrollIntoView({ behavior: "smooth" });
   };
 
   const goToAboutMe = () => {
-    const aboutMe = document.getElementById("about-me");
     setIsMenuOpen(false);
-    if (aboutMe) {
-      aboutMe.scrollIntoView({ behavior: "smooth" });
-    }
+    about?.scrollIntoView({ behavior: "smooth" });
   };
 
   const goToContactMe = () => {
-    const scrollHeight = document.body.scrollHeight;
     setIsMenuOpen(false);
-    window.scrollTo(0, scrollHeight);
+    contact?.scrollIntoView({ behavior: "smooth" });
   };
 
   const openMenu = () => {
@@ -45,12 +39,20 @@ const Header = () => {
   };
 
   useEffect(() => {
+    const project = document.getElementById("projects");
+    const about = document.getElementById("about-me");
+    const contact = document.getElementById("contact");
+
+    setProjects(project);
+    setAbout(about);
+    setContact(contact);
+
     if (isMenuOpen) {
       document.body.style.overflowY = "hidden";
     } else {
       document.body.style.overflowY = "visible";
     }
-  }, [isMenuOpen]);
+  }, [projects, isMenuOpen]);
 
   return (
     <div
