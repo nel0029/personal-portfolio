@@ -83,17 +83,31 @@ const Projects = () => {
                   <span>TailwindCSS</span>
                 </div>
               </div>
-              <div className="w-full grid grid-cols-2">
-                <a
-                  className="flex flex-row items-center gap-x-2 hover:text-blue hover:underline font-bold"
-                  href="https://github.com/nel0029/globally"
-                  target="_blank"
-                >
-                  <span className="text-xl">
-                    <IoLogoGithub />
-                  </span>
-                  <span>Github Repo</span>
-                </a>
+              <div className="w-full grid grid-cols-2 items-start">
+                <div className="flex flex-row items-center gap-x-2 font-bold">
+                  <div className=" flex flex-col bg-white px-2">
+                    <a
+                      className="hover:text-blue hover:underline cursor-pointer flex flex-row gap-x-2"
+                      href="https://github.com/nel0029/globally"
+                      target="_blank"
+                    >
+                      <span className="text-xl">
+                        <IoLogoGithub />
+                      </span>
+                      Frontend Repo
+                    </a>
+                    <a
+                      className="hover:text-blue hover:underline cursor-pointer flex flex-row gap-x-2"
+                      href="https://github.com/nel0029/globally-express"
+                      target="_blank"
+                    >
+                      <span className="text-xl">
+                        <IoLogoGithub />
+                      </span>
+                      Backend Repo
+                    </a>
+                  </div>
+                </div>
                 <a
                   className="flex flex-row items-center gap-x-2 hover:text-blue hover:underline font-bold"
                   href="https://globally.vercel.app/"
