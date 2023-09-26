@@ -93,7 +93,7 @@ const Hero = () => {
         </a>
         <a
           className="text-xl flex flex-row items-center gap-x-2 hover:text-blue"
-          href="https://linkedin.com/in/jaynel-lucañas-130577253"
+          href="https://www.linkedin.com/in/jaynel-lucanas"
           target="_blank"
         >
           <span>

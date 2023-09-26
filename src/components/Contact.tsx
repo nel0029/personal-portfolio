@@ -134,13 +134,13 @@ const Contact = () => {
 
         <a
           className="text-xl flex flex-row items-center gap-x-2 hover:text-blue"
-          href="https://linkedin.com/in/jaynel-lucañas-130577253"
+          href="https://www.linkedin.com/in/jaynel-lucanas"
           target="_blank"
         >
           <span>
             <IoLogoLinkedin />
           </span>
-          <span className="text-base">jaynel-lucañas-130577253</span>
+          <span className="text-base">jaynel-lucanas</span>
         </a>
       </div>
       <div className="w-full flex flex-row justify-center items-center py-2">
